@@ -1,0 +1,211 @@
+.app {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.app h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--headline);
+  text-align: center;
+}
+
+.app > p {
+  margin: 12px 0 40px;
+  color: var(--paragraph);
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Formulaire */
+.task-form {
+  display: flex;
+  gap: 12px;
+  background: rgba(39, 28, 25, 0.28);
+  padding: 16px;
+  border: 3px solid var(--card-border);
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 3px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--paragraph);
+  color: var(--button-text);
+  outline: none;
+}
+
+.task-form input::placeholder {
+  color: rgba(39, 28, 25, 0.7);
+}
+
+.task-form input:focus {
+  border-color: var(--button);
+  box-shadow: 0 0 0 4px rgba(255, 192, 173, 0.25);
+}
+
+.task-form button {
+  padding: 14px 20px;
+  border: 3px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--button);
+  color: var(--button-text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 var(--card-border);
+}
+
+/* Liste */
+.task-list {
+  display: grid;
+  gap: 16px;
+}
+
+/* Carte */
+.task-card {
+  background: var(--card-bg);
+  border: 3px solid var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 0 var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 0 var(--card-border);
+}
+
+.task-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  color: var(--headline);
+}
+
+.task-card p {
+  margin: 0 0 16px;
+  color: var(--paragraph);
+}
+
+.task-card button {
+  padding: 10px 14px;
+  border: 3px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--button);
+  color: var(--button-text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 var(--card-border);
+}
+
+.task-card.completed {
+  opacity: 0.75;
+}
+
+.task-card.completed h2 {
+  text-decoration: line-through;
+}
+
+/* Message vide */
+.empty-message {
+  text-align: center;
+  color: var(--paragraph);
+  background: rgba(39, 28, 25, 0.28);
+  border: 3px solid var(--card-border);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-icon {
+  flex-shrink: 0;
+}
+
+.completed-icon {
+  color: var(--button);
+}
+
+.todo-icon {
+  color: var(--paragraph);
+}
+
+.task-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-status span {
+  font-weight: 700;
+  color: var(--headline);
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-button {
+  background: var(--card-border);
+  color: var(--paragraph);
+}
+
+.task-card.completed {
+  opacity: 0.8;
+}
+
+.task-card.completed h2 {
+  text-decoration: line-through;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app {
+    padding: 32px 16px;
+  }
+
+  .app h1 {
+    font-size: 2.3rem;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-form button {
+    width: 100%;
+  }
+}
